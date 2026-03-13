@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Show Sorry</title>
+</head>
+<body style="text-align:center;margin-top:100px;font-size:40px">
+
+<h1 id="output"></h1>
+<button onclick="showLetter()">Click</button>
+
+<script>
+
+let codes = [83,79,82,82,89,32,76,79,86,69,32,89,79,85];
+let index = 0;
+
+function showLetter(){
+
+    if(index < codes.length)
+    {
+        let letter = String.fromCharCode(codes[index]);
+        document.getElementById("output").innerHTML += letter;
+        index++;
+    }
+
+}
+
+</script>
+
+</body>
+</html>
