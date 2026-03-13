@@ -103,9 +103,12 @@ Keep all responses professional, concise, and clear.
 
 
 
+
 // API setup
-const API_KEY = "AIzaSyDrpKnBLAVYWO8XRnWLvHub_c4HpXKv_Pc";
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${API_KEY}`;
+// const API_KEY = "AIzaSyDrpKnBLAVYWO8XRnWLvHub_c4HpXKv_Pc";
+// const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${API_KEY}`;
+const API_KEY = "AIzaSyA1Cn6kP2hX48DuPMKhaM0IcsMbnMVBi-A";
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${API_KEY}`;
 
 const userData = {
   message: null,
@@ -125,6 +128,19 @@ const createMessageElement = (content, ...classes) => {
   div.innerHTML = content;
   return div;
 };
+
+
+messageInput.addEventListener("keydown", function (e) {
+
+    if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();   // new line off
+        sendMessageButton.click();      // send button click trigger
+    }
+
+});
+
+
+
 
 // Generate bot response using API
 const generateBotResponse = async (incomingMessageDiv) => {
