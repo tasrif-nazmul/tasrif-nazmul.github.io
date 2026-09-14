@@ -1,0 +1,146 @@
+/* Portfolio presentation refinements */
+.navbar-brand .brand-calligraphy,
+#preloader .brand-calligraphy,
+.footer .brand-calligraphy {
+    width: 168px;
+    height: auto;
+    max-height: 58px;
+    object-fit: contain;
+}
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    min-width: 175px;
+}
+
+.navbar.navbar-light .navbar-brand img {
+    max-height: 54px;
+}
+
+#projects {
+    overflow: hidden;
+}
+
+#projects .section-title .para-desc {
+    max-width: 720px;
+    line-height: 1.8;
+}
+
+#projects .filters-group-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+#projects .portfolioFilter {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+#projects .portfolioFilter .categories-name {
+    margin: 0 !important;
+    padding: 2px 18px !important;
+    background: #fff;
+    border-color: #e5eaf0 !important;
+    box-shadow: 0 4px 18px rgba(60, 72, 88, 0.06);
+}
+
+#projects .portfolioFilter .categories-name.active,
+#projects .portfolioFilter .categories-name:hover {
+    box-shadow: 0 7px 20px rgba(103, 197, 110, 0.22);
+}
+
+/* Use a centered, predictable grid instead of absolute-positioned Shuffle layout. */
+#grid.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    width: 100%;
+    max-width: 1120px;
+    margin: 10px auto 0;
+    padding: 0 !important;
+}
+
+#grid.portfolio-grid .picture-item {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    opacity: 1 !important;
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+#grid.portfolio-grid .picture-item.portfolio-hidden {
+    display: none !important;
+}
+
+#grid.portfolio-grid .portfolio-box {
+    height: 100%;
+    border: 1px solid rgba(60, 72, 88, 0.08);
+    box-shadow: 0 10px 30px rgba(60, 72, 88, 0.08) !important;
+}
+
+#grid.portfolio-grid .portfolio-box-img {
+    aspect-ratio: 16 / 10;
+    background: #eef1f5;
+}
+
+#grid.portfolio-grid .portfolio-box-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#grid.portfolio-grid .gallary-title {
+    min-height: 108px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 18px !important;
+}
+
+#grid.portfolio-grid .gallary-title h5 {
+    margin-bottom: 6px;
+}
+
+#grid.portfolio-grid .gallary-title span {
+    color: #6c7a8b;
+    font-size: 14px;
+}
+
+@media (max-width: 991.98px) {
+    #grid.portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 760px;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand .brand-calligraphy {
+        width: 136px;
+    }
+
+    #grid.portfolio-grid {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+        gap: 20px;
+    }
+
+    #projects .portfolioFilter {
+        gap: 7px;
+    }
+
+    #projects .portfolioFilter .categories-name {
+        padding: 2px 12px !important;
+        font-size: 13px;
+    }
+}
