@@ -104,11 +104,8 @@ Keep all responses professional, concise, and clear.
 
 
 
-// API setup
-// const API_KEY = "AIzaSyDrpKnBLAVYWO8XRnWLvHub_c4HpXKv_Pc";
-// const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${API_KEY}`;
-const API_KEY = "AIzaSyA1Cn6kP2hX48DuPMKhaM0IcsMbnMVBi-A";
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${API_KEY}`;
+// API setup - requests are handled by the Cloudflare Worker.
+const API_URL = "https://portfolio-chatbot.nazmulhasan03412.workers.dev";
 
 const userData = {
   message: null,

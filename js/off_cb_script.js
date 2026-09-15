@@ -8,8 +8,9 @@ const chatbotToggler = document.querySelector("#chatbot-toggler");
 const closeChatbot = document.querySelector("#close-chatbot");
 
 
-// API setup - requests are handled by the Cloudflare Worker.
-const API_URL = "https://portfolio-chatbot.nazmulhasan03412.workers.dev";
+// API setup
+const API_KEY = "AIzaSyDLdAuQbzre2Ao9_MKmpNBymHkbVU95KM4";
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${API_KEY}`;
 
 const userData = {
   message: null,
