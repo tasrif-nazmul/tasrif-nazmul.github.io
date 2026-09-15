@@ -155,24 +155,25 @@ const generateBotResponse = async (incomingMessageDiv) => {
 chatHistory.push({
   role: "user",
   parts: [
-    {
-      text: `
-${CV_CONTEXT}
-
-User Question:
-${userData.message}
-`
-    },
+    { text: userData.message },
     ...(userData.file.data ? [{ inline_data: userData.file }] : []),
   ],
 });
+
+  // Keep requests small: send only the latest 6 chat items, and do not resend old images.
+  const recentHistory = chatHistory.slice(-6).map((item, index, items) => ({
+    role: item.role,
+    parts: item.parts
+      .filter((part) => index === items.length - 1 || typeof part.text === "string")
+      .map((part) => ({ ...part })),
+  }));
 
   // API request options
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      contents: chatHistory,
+      contents: recentHistory,
     }),
   };
 
@@ -180,12 +181,14 @@ ${userData.message}
     // Fetch bot response from API
     const response = await fetch(API_URL, requestOptions);
     const data = await response.json();
-    if (!response.ok) throw new Error(data.error.message);
+    if (!response.ok) throw new Error("CHAT_SERVICE_UNAVAILABLE");
 
     // Extract and display the bot response
-    const apiResponseText = data.candidates[0].content.parts[0].text
-      .replace(/\*\*(.*?)\*\*/g, "$1")
+    const apiResponseText = data?.candidates?.[0]?.content?.parts?.[0]?.text
+      ?.replace(/\*\*(.*?)\*\*/g, "$1")
       .trim();
+
+    if (!apiResponseText) throw new Error("CHAT_SERVICE_UNAVAILABLE");
     messageElement.innerText = apiResponseText;
 
     // Add bot response to chat history
@@ -197,8 +200,9 @@ ${userData.message}
     });
   } catch (error) {
     console.log(error);
-    messageElement.innerText = error.message;
-    messageElement.style.color = "#ff0000";
+    // Never expose backend/API details to visitors.
+    messageElement.innerText = "Sorry, the assistant is temporarily unavailable. Please try again shortly.";
+    messageElement.style.color = "";
   } finally {
     incomingMessageDiv.classList.remove("thinking");
     chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
