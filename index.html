@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 <meta name="author" content="Nazmul Hasan">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://nazmulhasan.com.bd/">
-<meta name="theme-color" content="#0d1014">
+<meta name="theme-color" content="#f2efe8">
 
 <meta property="og:title" content="Nazmul Hasan | Software Developer &amp; Web Developer in Bangladesh">
 <meta property="og:description" content="Official portfolio of Nazmul Hasan, a software and web developer in Bangladesh specializing in business applications, ERP solutions, and modern web development.">
@@ -36,16 +36,19 @@
       "@type": "Person",
       "@id": "https://nazmulhasan.com.bd/#person",
       "name": "Nazmul Hasan",
+      "alternateName": "Nazmul Hasan Mamun",
       "url": "https://nazmulhasan.com.bd/",
       "image": "https://nazmulhasan.com.bd/images/home/nazmul-hasan-software-developer-bangladesh.jpeg",
-      "jobTitle": "Software Developer",
-      "description": "Software and web developer in Bangladesh specializing in business applications, ERP solutions, and modern web development.",
+      "jobTitle": "Software Engineer",
+      "description": "Software and web developer in Bangladesh specializing in ERP, HRM, accounting and business applications, and AI integration.",
       "worksFor": { "@type": "Organization", "name": "Generation-Next IT Solution Ltd." },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "American International University-Bangladesh (AIUB)" },
+      "award": "Leadership Certificate, AIUB Environment Club",
       "email": "mailto:hello@nazmulhasan.com.bd",
       "telephone": "+8801783973740",
-      "address": { "@type": "PostalAddress", "streetAddress": "G/15 Bashundhara R/A", "addressLocality": "Dhaka", "addressCountry": "BD" },
-      "knowsAbout": ["ERP development", "Business applications", "ASP.NET", "MSSQL", "Crystal Reports", "Next.js", "Nest.js", "jQuery"],
-      "knowsLanguage": ["bn", "en", "hi", "ur"],
+      "address": { "@type": "PostalAddress", "streetAddress": "Bashundhara R/A", "addressLocality": "Dhaka", "addressCountry": "BD" },
+      "knowsAbout": ["ERP development", "HRM and payroll systems", "Accounting software", "Microfinance software", "ASP.NET", "ASP.NET Web API", "C#", "SQL Server", "Stored procedures", "Next.js", "NestJS", "Crystal Reports", "AI chatbots", "Computer vision"],
+      "knowsLanguage": ["bn", "en"],
       "sameAs": [
         "https://www.facebook.com/tasrifnaazmul",
         "https://www.instagram.com/tasrif_nazmul/",
@@ -53,418 +56,715 @@
         "https://github.com/tasrif-nazmul"
       ]
     },
-    {
-      "@type": "WebSite",
-      "@id": "https://nazmulhasan.com.bd/#website",
-      "url": "https://nazmulhasan.com.bd/",
-      "name": "Nazmul Hasan",
-      "publisher": { "@id": "https://nazmulhasan.com.bd/#person" },
-      "inLanguage": "en"
-    },
-    {
-      "@type": "ProfilePage",
-      "url": "https://nazmulhasan.com.bd/",
-      "name": "Nazmul Hasan | Software Developer & Web Developer in Bangladesh",
-      "mainEntity": { "@id": "https://nazmulhasan.com.bd/#person" }
-    }
+    { "@type": "WebSite", "@id": "https://nazmulhasan.com.bd/#website", "url": "https://nazmulhasan.com.bd/", "name": "Nazmul Hasan", "publisher": { "@id": "https://nazmulhasan.com.bd/#person" }, "inLanguage": "en" },
+    { "@type": "ProfilePage", "url": "https://nazmulhasan.com.bd/", "name": "Nazmul Hasan | Software Developer & Web Developer in Bangladesh", "mainEntity": { "@id": "https://nazmulhasan.com.bd/#person" } }
   ]
 }
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Hind+Siliguri:wght@400;600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#0d1014; --bg2:#13171d; --card:#171c23; --line:#252c35;
-  --ink:#eef1ec; --mute:#97a1ab; --acc:#4fe3a1; --acc2:#f3b75b; --accInk:#06261a;
-  --serif:"Fraunces",Georgia,serif; --sans:"Inter Tight",system-ui,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,monospace; --bn:"Hind Siliguri",sans-serif;
+  --paper:#f2efe8; --paper2:#e9e5db; --card:#faf8f3; --ink:#111110; --ink2:#3b3a36; --mute:#7a776f; --rule:#d6d1c4;
+  --sig:#ff4f1a; --sigInk:#fff;
+  --sans:"Geist",system-ui,-apple-system,sans-serif; --serif:"Instrument Serif",Georgia,serif; --mono:"Geist Mono",ui-monospace,monospace;
+  --pad:clamp(20px,4vw,56px);
 }
-[data-theme="light"]{
-  --bg:#f5f2ea; --bg2:#ece7da; --card:#fffdf8; --line:#ddd5c4;
-  --ink:#16191d; --mute:#5d646c; --acc:#0f8a5f; --acc2:#b86e00; --accInk:#ffffff;
+[data-theme="dark"]{
+  --paper:#0f0f0e; --paper2:#171715; --card:#1a1a18; --ink:#f1eee6; --ink2:#c9c5bb; --mute:#8a867c; --rule:#2c2b28;
+  --sig:#ff6a3d;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;
-  background-image:linear-gradient(var(--line) 1px,transparent 1px);background-size:100% 44px;background-attachment:fixed}
-body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 20% 0%,transparent 0,var(--bg) 70%);pointer-events:none;z-index:-1}
-a{color:inherit}
-img{max-width:100%;display:block}
-.wrap{width:min(1120px,92vw);margin:0 auto}
-.bn{font-family:var(--bn)}
-.mono{font-family:var(--mono)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:400 16px/1.55 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .4s,color .4s}
+::selection{background:var(--sig);color:var(--sigInk)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.mono{font:500 11.5px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.serif{font-family:var(--serif);font-weight:400}
+.px{padding-left:var(--pad);padding-right:var(--pad)}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.05;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+[data-theme="dark"] .grain{mix-blend-mode:screen;opacity:.04}
+#progress{position:fixed;top:0;left:0;height:2px;background:var(--sig);width:0;z-index:60}
 
-/* nav */
-header.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font:800 22px var(--serif);text-decoration:none;letter-spacing:-.02em}
-.logo span{color:var(--acc)}
-.nav ul{display:flex;gap:26px;list-style:none;font-size:15px}
-.nav ul a{text-decoration:none;color:var(--mute)}
-.nav ul a:hover{color:var(--ink)}
-.tbtn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:99px;width:38px;height:38px;cursor:pointer;font-size:16px}
-@media(max-width:760px){.nav ul{display:none}}
+/* ---------- top bar ---------- */
+.bar{position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:56px;
+  background:color-mix(in srgb,var(--paper) 78%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.bar.scrolled{border-color:var(--rule)}
+.bar .id{font-weight:600;letter-spacing:-.01em;font-size:15px;display:flex;align-items:center;gap:10px}
+.bar .id i{width:8px;height:8px;border-radius:50%;background:var(--sig);display:inline-block}
+.bar nav{display:flex;gap:4px}
+.bar nav a{padding:6px 12px;border-radius:99px;font-size:14px;color:var(--ink2);transition:background .2s,color .2s}
+.bar nav a:hover,.bar nav a.on{background:var(--ink);color:var(--paper)}
+.bar .right{display:flex;justify-content:flex-end;align-items:center;gap:10px}
+.kbd{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--rule);border-radius:99px;padding:6px 8px 6px 14px;font-size:13px;color:var(--ink2);transition:border-color .2s}
+.kbd:hover{border-color:var(--ink)}
+.kbd kbd{font:500 11px var(--mono);background:var(--paper2);border-radius:6px;padding:3px 6px}
+.icon-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--rule);display:grid;place-items:center;transition:border-color .2s}
+.icon-btn:hover{border-color:var(--ink)}
+@media(max-width:900px){.bar{grid-template-columns:1fr auto}.bar nav{display:none}.kbd span{display:none}.kbd{padding:6px 8px}}
 
-/* hero */
-.hero{padding:88px 0 64px;display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:center}
-.eyebrow{font:500 13px var(--mono);color:var(--acc);letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:28px;height:1px;background:var(--acc)}
-h1{font:800 clamp(48px,8vw,96px)/.95 var(--serif);letter-spacing:-.035em;margin:18px 0 18px}
-h1 em{font-style:italic;font-weight:400;color:var(--acc)}
-.tag-bn{font:600 clamp(20px,2.6vw,28px)/1.4 var(--bn);color:var(--acc2);margin-bottom:14px}
-.lead{color:var(--mute);font-size:19px;max-width:560px}
-.cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:12px;font-weight:600;text-decoration:none;font-size:15px;border:1px solid var(--line);transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{background:var(--acc);color:var(--accInk);border-color:var(--acc)}
-.stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
-.stat b{display:block;font:600 34px var(--mono);letter-spacing:-.03em}
-.stat span{font-size:13px;color:var(--mute)}
+/* ---------- hero ---------- */
+.hero{padding-top:96px;min-height:100svh;display:flex;flex-direction:column}
+.hero-meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--mute);padding-top:28px;padding-bottom:18px;border-bottom:1px solid var(--rule)}
+.hero-meta .live{color:var(--ink);display:flex;align-items:center;gap:8px}
+.hero-meta .live::before{content:"";width:7px;height:7px;border-radius:50%;background:#1fbf6a;box-shadow:0 0 0 0 rgba(31,191,106,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 8px rgba(31,191,106,0)}100%{box-shadow:0 0 0 0 rgba(31,191,106,0)}}
+.name{font:600 clamp(64px,12.4vw,220px)/.82 var(--sans);letter-spacing:-.065em;margin-top:clamp(20px,4vw,40px);display:flex;flex-wrap:wrap;align-items:flex-end;column-gap:.18em}
+.name .w{display:inline-flex;overflow:hidden;padding-bottom:.06em}
+.name .w span{display:inline-block;transform:translateY(105%);transition:transform 1s cubic-bezier(.2,.8,.1,1)}
+.loaded .name .w span{transform:none}
+.name .it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.03em}
+.portrait-inline{width:.9em;height:.9em;border-radius:.16em;overflow:hidden;align-self:center;transform:rotate(-4deg) scale(.3);opacity:0;transition:transform 1s .4s cubic-bezier(.2,.8,.1,1),opacity .6s .4s;background:var(--paper2);flex-shrink:0;margin-bottom:.06em}
+.loaded .portrait-inline{transform:rotate(-4deg);opacity:1}
+.portrait-inline img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15) contrast(1.05)}
 
-.portrait{position:relative}
-.photo{aspect-ratio:4/5;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(140deg,var(--card),var(--bg2));position:relative}
-.photo img{width:100%;height:100%;object-fit:cover}
-.fallback{position:absolute;inset:0;display:grid;place-items:center;font:800 120px var(--serif);color:var(--acc);opacity:.85}
-.photo img + .fallback{display:none}
-.photo.noimg .fallback{display:grid}
-.ledger{position:absolute;left:-40px;bottom:-28px;width:min(330px,88%);background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;font:13px/1.9 var(--mono);box-shadow:0 24px 60px rgba(0,0,0,.35)}
-.ledger .row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line)}
-.ledger .row:last-child{border:0}
-.ledger .ok{color:var(--acc)}
-.ledger .hd{color:var(--mute);font-size:11px;letter-spacing:.1em;margin-bottom:4px}
-@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:56px}.portrait{max-width:420px}.ledger{left:auto;right:-8px}}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,5vw,80px);margin-top:auto;padding-top:48px;padding-bottom:40px;align-items:end}
+.statement{font:400 clamp(24px,2.7vw,38px)/1.18 var(--sans);letter-spacing:-.025em;max-width:640px}
+.statement em{font-family:var(--serif);font-size:1.12em;letter-spacing:-.01em}
+.statement mark{background:none;color:var(--sig)}
+.facts{display:flex;gap:clamp(18px,3vw,40px);margin-top:28px;flex-wrap:wrap}
+.facts div b{display:block;font:500 28px/1 var(--sans);letter-spacing:-.04em;margin-bottom:6px}
+.facts div span{color:var(--mute)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
 
-/* sections */
-section{padding:96px 0;border-top:1px solid var(--line)}
-.sh{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
-.sh .num{font:500 13px var(--mono);color:var(--acc)}
-h2{font:700 clamp(34px,5vw,56px)/1.05 var(--serif);letter-spacing:-.03em;margin-top:8px}
-.sh p{color:var(--mute);max-width:420px}
+/* ---------- ask jarvis ---------- */
+.ask{background:var(--ink);color:var(--paper);border-radius:22px;padding:20px;position:relative;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.45)}
+[data-theme="dark"] .ask{background:var(--card);color:var(--ink);border:1px solid var(--rule)}
+.ask::before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,var(--sig),transparent 65%);opacity:.22;top:-160px;right:-120px;filter:blur(10px);animation:drift 9s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-60px,40px)}}
+.ask-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;position:relative}
+.ask-head .who{display:flex;align-items:center;gap:10px;font-weight:600}
+.orb{width:26px;height:26px;border-radius:50%;background:conic-gradient(from 0deg,var(--sig),#ffb199,#fff3,var(--sig));animation:spin 6s linear infinite;box-shadow:0 0 18px -2px var(--sig)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ask-head .mono{opacity:.55}
+.log{max-height:220px;overflow:auto;display:flex;flex-direction:column;gap:10px;margin-bottom:14px;position:relative;scrollbar-width:thin}
+.msg{font-size:15px;line-height:1.5;max-width:92%;animation:up .4s ease}
+@keyframes up{from{opacity:0;transform:translateY(6px)}}
+.msg.me{align-self:flex-end;background:color-mix(in srgb,currentColor 12%,transparent);padding:8px 13px;border-radius:14px 14px 4px 14px}
+.msg.ai{opacity:.92}
+.msg.ai.typing::after{content:"▍";animation:blink 1s steps(2) infinite;color:var(--sig)}
+@keyframes blink{50%{opacity:0}}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;position:relative}
+.chips button{font-size:13px;padding:6px 11px;border-radius:99px;border:1px solid color-mix(in srgb,currentColor 22%,transparent);transition:background .2s,border-color .2s}
+.chips button:hover{background:color-mix(in srgb,currentColor 10%,transparent);border-color:currentColor}
+.ask form{display:flex;gap:8px;position:relative}
+.ask input{flex:1;background:color-mix(in srgb,currentColor 8%,transparent);border:1px solid color-mix(in srgb,currentColor 16%,transparent);border-radius:12px;padding:12px 14px;color:inherit;font:15px var(--sans);outline:none;min-width:0}
+.ask input:focus{border-color:var(--sig)}
+.ask input::placeholder{color:inherit;opacity:.45}
+.send{background:var(--sig);color:var(--sigInk);border-radius:12px;padding:0 16px;font-weight:600;font-size:14px}
 
-/* about */
-.about{display:grid;grid-template-columns:1.1fr 1fr;gap:56px}
-.about p{color:var(--mute);margin-bottom:16px;font-size:18px}
-.about p strong{color:var(--ink);font-weight:600}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:14px;color:var(--mute);background:var(--card)}
-.about h3{font:600 13px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0 0 14px}
-@media(max-width:860px){.about{grid-template-columns:1fr}}
+/* ---------- marquee ---------- */
+.marquee{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);overflow:hidden;padding:16px 0;white-space:nowrap}
+.marquee .track{display:inline-flex;gap:44px;animation:mq 38s linear infinite;padding-left:44px}
+.marquee span{font:400 26px var(--serif);font-style:italic;color:var(--ink2);display:inline-flex;align-items:center;gap:44px}
+.marquee span::after{content:"✦";font-style:normal;font-size:12px;color:var(--sig)}
+@keyframes mq{to{transform:translateX(-50%)}}
 
-/* services */
-.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
-.svc article{background:var(--bg);padding:32px 28px;transition:background .2s}
-.svc article:hover{background:var(--card)}
-.svc .ic{font:600 13px var(--mono);color:var(--acc2)}
-.svc h3{font:600 22px var(--serif);margin:14px 0 8px}
-.svc p{color:var(--mute);font-size:15px}
-@media(max-width:900px){.svc{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.svc{grid-template-columns:1fr}}
+/* ---------- sections ---------- */
+section{padding-top:clamp(80px,11vw,150px);padding-bottom:clamp(40px,6vw,80px)}
+.sec-head{display:grid;grid-template-columns:200px 1fr;gap:24px;margin-bottom:clamp(36px,5vw,64px);align-items:start}
+.sec-head .mono{color:var(--mute);padding-top:14px}
+.sec-head h2{font:500 clamp(40px,6.4vw,96px)/.95 var(--sans);letter-spacing:-.055em;max-width:14ch}
+.sec-head h2 em{font-family:var(--serif);font-weight:400;letter-spacing:-.025em}
+.sec-head p{color:var(--ink2);max-width:520px;margin-top:20px;font-size:18px}
+@media(max-width:760px){.sec-head{grid-template-columns:1fr;gap:8px}}
 
-/* projects */
-.filters{display:flex;gap:8px;flex-wrap:wrap}
-.filters button{background:var(--card);border:1px solid var(--line);color:var(--mute);padding:8px 16px;border-radius:99px;font:500 14px var(--sans);cursor:pointer}
-.filters button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.proj{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
-.proj:hover{transform:translateY(-4px);border-color:var(--acc)}
-.proj .thumb{aspect-ratio:16/10;background:linear-gradient(135deg,var(--bg2),var(--card));position:relative;overflow:hidden}
-.proj .thumb img{width:100%;height:100%;object-fit:cover}
-.proj .thumb .fallback{font-size:56px}
-.proj .thumb.noimg .fallback{display:grid}
-.proj .thumb img + .fallback{display:none}
-.proj .body{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column}
-.proj .cat{font:500 12px var(--mono);color:var(--acc);letter-spacing:.08em;text-transform:uppercase}
-.proj h3{font:600 23px var(--serif);margin:8px 0}
-.proj p{color:var(--mute);font-size:15px;flex:1}
-.proj .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:16px}
-.proj .tags span{font:12px var(--mono);color:var(--mute);border:1px solid var(--line);padding:3px 8px;border-radius:6px}
-.proj.hide{display:none}
-@media(max-width:960px){.grid{grid-template-columns:1fr 1fr}}
-@media(max-width:620px){.grid{grid-template-columns:1fr}}
+/* ---------- work list ---------- */
+.work{border-top:1px solid var(--ink)}
+.row{border-bottom:1px solid var(--rule)}
+.row-top{display:grid;grid-template-columns:60px 1.4fr 1fr 1fr 40px;gap:20px;align-items:center;padding:26px 0;width:100%;text-align:left;transition:padding .35s cubic-bezier(.2,.8,.1,1)}
+.row-top:hover{padding-left:14px}
+.row .n{font:500 13px var(--mono);color:var(--mute)}
+.row h3{font:500 clamp(24px,3vw,40px)/1.05 var(--sans);letter-spacing:-.04em}
+.row h3 em{font-family:var(--serif);font-weight:400;color:var(--mute);font-size:.85em}
+.row .role,.row .stk{color:var(--ink2);font-size:14px}
+.row .plus{width:34px;height:34px;border:1px solid var(--rule);border-radius:50%;display:grid;place-items:center;transition:transform .4s,background .2s,color .2s}
+.row.open .plus{transform:rotate(45deg);background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.row-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s cubic-bezier(.2,.8,.1,1)}
+.row.open .row-body{grid-template-rows:1fr}
+.row-body>div{overflow:hidden}
+.detail{display:grid;grid-template-columns:60px 1.2fr 1fr;gap:20px;padding:0 0 36px}
+.detail .shot{grid-column:3;border-radius:14px;overflow:hidden;aspect-ratio:16/10;background:var(--paper2);position:relative}
+.detail .shot img{width:100%;height:100%;object-fit:cover}
+.detail .txt{grid-column:2}
+.detail h4{font:500 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
+.detail p{color:var(--ink2);margin-bottom:18px;font-size:16px;max-width:560px}
+.detail ul{list-style:none;margin-bottom:18px}
+.detail li{padding:6px 0 6px 20px;position:relative;color:var(--ink2);font-size:15.5px}
+.detail li::before{content:"→";position:absolute;left:0;color:var(--sig)}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pills span{font:500 12px var(--mono);border:1px solid var(--rule);border-radius:6px;padding:4px 8px;color:var(--ink2)}
+.typo-shot{position:absolute;inset:0;display:grid;place-items:center;font:italic 400 clamp(36px,5vw,64px) var(--serif);color:var(--mute);background:repeating-linear-gradient(135deg,var(--paper2) 0 12px,var(--paper) 12px 24px)}
+@media(max-width:860px){
+  .row-top{grid-template-columns:40px 1fr 34px}
+  .row .role,.row .stk{display:none}
+  .detail{grid-template-columns:1fr}
+  .detail .shot,.detail .txt{grid-column:1}
+}
+#peek{position:fixed;top:0;left:0;width:300px;aspect-ratio:16/10;border-radius:14px;overflow:hidden;pointer-events:none;z-index:40;opacity:0;transform:translate(-50%,-50%) scale(.8) rotate(-3deg);transition:opacity .25s,transform .35s cubic-bezier(.2,.8,.1,1);box-shadow:0 30px 60px -20px rgba(0,0,0,.4);background:var(--paper2)}
+#peek.show{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-3deg)}
+#peek img{width:100%;height:100%;object-fit:cover}
+@media(hover:none),(max-width:860px){#peek{display:none}}
 
-/* timeline */
-.tl{display:grid;gap:0}
-.tl .item{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 0;border-bottom:1px solid var(--line)}
-.tl .item:last-child{border:0}
-.tl .when{font:500 14px var(--mono);color:var(--mute)}
-.tl .when b{display:inline-block;color:var(--accInk);background:var(--acc);padding:2px 8px;border-radius:6px;font-size:11px;margin-top:8px}
-.tl h3{font:600 24px var(--serif)}
-.tl .org{color:var(--acc2);font-size:15px;margin:2px 0 8px}
-.tl p{color:var(--mute);font-size:15px}
-@media(max-width:700px){.tl .item{grid-template-columns:1fr;gap:6px}}
+/* ---------- AI ---------- */
+.ai-wrap{background:var(--ink);color:var(--paper);border-radius:clamp(20px,3vw,36px);margin:0 clamp(8px,1.4vw,20px);padding-top:clamp(70px,9vw,120px);padding-bottom:clamp(50px,7vw,90px);position:relative;overflow:hidden}
+[data-theme="dark"] .ai-wrap{background:#171512;color:var(--ink)}
+.ai-wrap .sec-head .mono{color:color-mix(in srgb,currentColor 55%,transparent)}
+.ai-wrap .sec-head p{color:color-mix(in srgb,currentColor 75%,transparent)}
+.ai-wrap .sec-head h2 em{color:var(--sig)}
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;position:relative}
+.ai-card{border:1px solid color-mix(in srgb,currentColor 16%,transparent);border-radius:20px;padding:26px;min-height:300px;display:flex;flex-direction:column;position:relative;overflow:hidden;background:color-mix(in srgb,currentColor 3%,transparent)}
+.ai-card::after{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--sig) 22%,transparent),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
+.ai-card:hover::after{opacity:1}
+.ai-card .mono{opacity:.55}
+.ai-card h3{font:500 28px/1.05 var(--sans);letter-spacing:-.035em;margin:auto 0 12px;padding-top:40px}
+.ai-card p{opacity:.72;font-size:15px}
+.ai-card .viz{position:absolute;top:22px;right:22px}
+.ai-card .pills span{border-color:color-mix(in srgb,currentColor 18%,transparent);color:inherit;opacity:.8}
+.ai-card .pills{margin-top:18px}
+.ai-card a.go{margin-top:16px;color:var(--sig);font-weight:500;font-size:14px}
+.ai-big{font:400 clamp(28px,4vw,56px)/1.05 var(--serif);letter-spacing:-.02em;margin-top:clamp(50px,7vw,90px);max-width:22ch}
+.ai-big em{color:var(--sig)}
+@media(max-width:960px){.ai-grid{grid-template-columns:1fr}}
 
-/* stack */
-.stack{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.stack .box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
-.stack h3{font:600 13px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:14px}
-.stack li{list-style:none;padding:7px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;font-size:15px}
-.stack li:last-child{border:0}
-.stack li small{color:var(--mute);font:12px var(--mono)}
-@media(max-width:900px){.stack{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.stack{grid-template-columns:1fr}}
+/* ---------- experience ---------- */
+.xp{border-top:1px solid var(--ink)}
+.xp-row{display:grid;grid-template-columns:200px 1fr 1.2fr;gap:24px;padding:34px 0;border-bottom:1px solid var(--rule)}
+.xp-row .when{color:var(--mute)}
+.xp-row .when b{display:inline-block;margin-top:10px;background:var(--sig);color:var(--sigInk);padding:3px 8px;border-radius:5px;font-weight:500}
+.xp-row h3{font:500 30px/1.05 var(--sans);letter-spacing:-.04em}
+.xp-row .org{font:italic 400 21px var(--serif);color:var(--ink2);margin-top:6px}
+.xp-row ul{list-style:none}
+.xp-row li{padding:5px 0 5px 20px;position:relative;color:var(--ink2)}
+.xp-row li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:1px;background:var(--ink2)}
+@media(max-width:860px){.xp-row{grid-template-columns:1fr;gap:10px}}
 
-/* contact */
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.big{font:700 clamp(36px,5.5vw,64px)/1.05 var(--serif);letter-spacing:-.03em}
-.big em{font-style:italic;font-weight:400;color:var(--acc)}
-.cinfo{margin-top:28px;display:grid;gap:14px}
-.cinfo a,.cinfo div{display:flex;gap:14px;align-items:baseline;text-decoration:none;font-size:17px}
-.cinfo small{font:12px var(--mono);color:var(--mute);width:70px;flex-shrink:0;text-transform:uppercase;letter-spacing:.08em}
-form{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;gap:14px}
-label{font:500 13px var(--mono);color:var(--mute);display:grid;gap:6px}
-input,textarea{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:13px 14px;color:var(--ink);font:16px var(--sans)}
-input:focus,textarea:focus{outline:2px solid var(--acc);border-color:transparent}
-textarea{min-height:120px;resize:vertical}
-form .btn{justify-content:center;cursor:pointer;font-family:var(--sans)}
-.note{font-size:13px;color:var(--mute);min-height:18px}
-@media(max-width:860px){.contact{grid-template-columns:1fr}}
+.creds{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.cred{background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:24px}
+.cred .mono{color:var(--mute)}
+.cred h4{font:500 22px/1.15 var(--sans);letter-spacing:-.03em;margin:18px 0 6px}
+.cred p{color:var(--ink2);font-size:15px}
+.cred .big{font:400 54px/1 var(--serif);margin-top:16px}
+@media(max-width:860px){.creds{grid-template-columns:1fr}}
 
-footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--mute);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
-.social{display:flex;gap:18px}
-.social a{text-decoration:none}
-.social a:hover{color:var(--acc)}
+/* ---------- stack ---------- */
+.stack{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+.stack .col{padding:26px 22px 26px 0;border-right:1px solid var(--rule)}
+.stack .col+.col{padding-left:22px}
+.stack .col:last-child{border-right:0}
+.stack .mono{color:var(--mute);margin-bottom:18px;display:block}
+.stack li{list-style:none;font:500 21px/1.65 var(--sans);letter-spacing:-.025em}
+@media(max-width:860px){.stack{grid-template-columns:1fr 1fr}.stack .col{padding:22px 12px!important;border-bottom:1px solid var(--rule)}}
 
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+/* ---------- github ---------- */
+.repos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.repo{border:1px solid var(--rule);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px;min-height:150px;transition:border-color .2s,transform .3s;background:var(--card)}
+.repo:hover{border-color:var(--ink);transform:translateY(-3px)}
+.repo .mono{color:var(--mute)}
+.repo h4{font:500 18px/1.2 var(--sans);letter-spacing:-.02em;word-break:break-word}
+.repo p{color:var(--ink2);font-size:14px;margin-top:auto}
+@media(max-width:960px){.repos{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.repos{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contact{padding-top:clamp(90px,12vw,170px);padding-bottom:40px}
+.contact .mono{color:var(--mute)}
+.cta-big{font:500 clamp(48px,10vw,170px)/.88 var(--sans);letter-spacing:-.065em;margin:24px 0 40px}
+.cta-big em{font-family:var(--serif);font-weight:400;letter-spacing:-.03em;color:var(--sig)}
+.mail{display:inline-flex;align-items:center;gap:16px;font:400 clamp(22px,3.4vw,46px) var(--serif);border-bottom:2px solid var(--ink);padding-bottom:6px;transition:color .2s,border-color .2s;word-break:break-all}
+.mail:hover{color:var(--sig);border-color:var(--sig)}
+.c-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:99px;border:1px solid var(--ink);font-weight:500;font-size:15px;transition:background .2s,color .2s}
+.btn:hover,.btn.fill{background:var(--ink);color:var(--paper)}
+.btn.fill:hover{background:var(--sig);border-color:var(--sig);color:var(--sigInk)}
+.c-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:clamp(60px,8vw,110px);padding-top:24px;border-top:1px solid var(--rule)}
+.c-grid .mono{display:block;margin-bottom:8px}
+.c-grid a:hover{color:var(--sig)}
+@media(max-width:760px){.c-grid{grid-template-columns:1fr 1fr}}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;padding-bottom:28px;color:var(--mute);border-top:1px solid var(--rule)}
+
+/* ---------- command palette ---------- */
+.cmdk{position:fixed;inset:0;z-index:90;display:none;align-items:flex-start;justify-content:center;padding-top:14vh;background:rgba(10,10,9,.35);backdrop-filter:blur(4px)}
+.cmdk.open{display:flex}
+.cmdk-box{width:min(560px,92vw);background:var(--card);border:1px solid var(--rule);border-radius:18px;box-shadow:0 40px 100px -20px rgba(0,0,0,.5);overflow:hidden;animation:pop .22s cubic-bezier(.2,.8,.1,1)}
+@keyframes pop{from{opacity:0;transform:scale(.97) translateY(-6px)}}
+.cmdk input{width:100%;border:0;border-bottom:1px solid var(--rule);background:none;padding:18px 20px;font:17px var(--sans);color:var(--ink);outline:none}
+.cmdk ul{list-style:none;max-height:340px;overflow:auto;padding:8px}
+.cmdk li{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;border-radius:10px;cursor:pointer;font-size:15px}
+.cmdk li small{color:var(--mute);font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.cmdk li.sel{background:var(--ink);color:var(--paper)}
+.cmdk li.sel small{color:inherit;opacity:.6}
+.cmdk .hint{padding:10px 16px;border-top:1px solid var(--rule);color:var(--mute)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--paper);padding:11px 18px;border-radius:99px;font-size:14px;opacity:0;transition:all .3s;z-index:95;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.8,.1,1),transform .9s cubic-bezier(.2,.8,.1,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.name .w span{transform:none}.portrait-inline{opacity:1;transform:rotate(-4deg)}}
 </style>
 </head>
 <body>
+<div class="grain" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
 
-<header class="nav">
-  <div class="wrap">
-    <a class="logo" href="#home" aria-label="Nazmul Hasan home">nazmul<span>.</span></a>
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <button class="tbtn" id="theme" aria-label="Toggle dark and light mode">◐</button>
+<header class="bar px" id="bar">
+  <a href="#top" class="id"><i></i>Nazmul Hasan</a>
+  <nav aria-label="Main">
+    <a href="#work">Work</a><a href="#ai">AI</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="right">
+    <button class="kbd" id="openK" aria-label="Open command menu"><span>Quick menu</span><kbd id="kmod">⌘K</kbd></button>
+    <button class="icon-btn" id="theme" aria-label="Toggle dark mode">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
   </div>
 </header>
 
-<main id="home">
-  <div class="wrap hero">
-    <div>
-      <p class="eyebrow">Software Developer · Dhaka, Bangladesh</p>
-      <h1>Nazmul <em>Hasan</em></h1>
-      <p class="tag-bn bn" lang="bn">ব্যবসার হিসাব যেন নিজেই চলে, সেই সফটওয়্যার বানাই।</p>
-      <p class="lead">I build ERP and business applications: accounting, micro finance, HR and support systems that turn messy daily operations into clean, reliable software.</p>
-      <div class="cta">
-        <a class="btn primary" href="#projects">See my work →</a>
-        <a class="btn" href="/pdf/CV_Nazmul_Hasan.pdf" target="_blank" rel="noopener">Download CV</a>
-      </div>
-      <div class="stats">
-        <div class="stat"><b data-count="3">3</b><span>years of experience</span></div>
-        <div class="stat"><b data-count="36">36</b><span>projects completed</span></div>
-        <div class="stat"><b data-count="2">2</b><span>awards</span></div>
-      </div>
+<main id="top">
+  <!-- HERO -->
+  <div class="hero px">
+    <div class="hero-meta mono">
+      <span class="live">Open to new projects</span>
+      <span>Software Engineer — ERP · HRM · AI</span>
+      <span>Dhaka, BD · <span id="clock">--:--</span> GMT+6</span>
     </div>
-    <div class="portrait">
-      <div class="photo">
-        <img src="/images/home/nazmul-hasan-software-developer-bangladesh.jpeg" alt="Nazmul Hasan - Software Developer and Web Developer in Bangladesh" width="962" height="962" fetchpriority="high" onerror="this.parentNode.classList.add('noimg');this.remove()">
-        <div class="fallback" aria-hidden="true">NH</div>
+
+    <h1 class="name" aria-label="Nazmul Hasan">
+      <span class="w"><span>Nazmul</span></span>
+      <span class="portrait-inline"><img src="/images/home/nazmul-hasan-software-developer-bangladesh.jpeg" alt="Nazmul Hasan - Software Developer and Web Developer in Bangladesh" width="962" height="962" fetchpriority="high"></span>
+      <span class="w"><span class="it">Hasan</span></span>
+    </h1>
+
+    <div class="hero-grid">
+      <div class="rv">
+        <p class="statement">I build the <em>quiet machinery</em> behind businesses: payroll, accounting, microfinance and ERP systems that run every day, and the <mark>AI</mark> that makes them smarter.</p>
+        <div class="facts mono">
+          <div><b>2+ yrs</b><span>Production ERP</span></div>
+          <div><b>6</b><span>Enterprise systems</span></div>
+          <div><b>1</b><span>Payroll module, end-to-end</span></div>
+        </div>
       </div>
-      <div class="ledger" aria-hidden="true">
-        <div class="hd">BUILD LOG</div>
-        <div class="row"><span>micro-finance</span><span class="ok">✓ live</span></div>
-        <div class="row"><span>accounting-inventory</span><span class="ok">✓ live</span></div>
-        <div class="row"><span>hrm-payroll</span><span class="ok">✓ live</span></div>
-        <div class="row"><span>next-project</span><span id="cursor">your idea_</span></div>
+
+      <div class="ask rv" id="ask">
+        <div class="ask-head">
+          <div class="who"><span class="orb" aria-hidden="true"></span>Ask Jarvis</div>
+          <span class="mono">My AI assistant</span>
+        </div>
+        <div class="log" id="log" aria-live="polite">
+          <div class="msg ai">Hi, I'm Jarvis. Ask me anything about Nazmul's work, skills or availability.</div>
+        </div>
+        <div class="chips" id="chips">
+          <button>What has he built?</button>
+          <button>Tech stack?</button>
+          <button>AI experience?</button>
+          <button>Is he available?</button>
+        </div>
+        <form id="askForm">
+          <input id="q" placeholder="Type a question…" autocomplete="off" aria-label="Ask Jarvis a question">
+          <button class="send" type="submit">Ask</button>
+        </form>
       </div>
     </div>
   </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Payroll engines</span><span>Accounting ledgers</span><span>Microfinance</span><span>Stored procedures</span><span>Billing &amp; payments</span><span>AI assistants</span><span>Computer vision</span><span>ERP modules</span>
+      <span>Payroll engines</span><span>Accounting ledgers</span><span>Microfinance</span><span>Stored procedures</span><span>Billing &amp; payments</span><span>AI assistants</span><span>Computer vision</span><span>ERP modules</span>
+    </div>
+  </div>
+
+  <!-- WORK -->
+  <section id="work" class="px">
+    <div class="sec-head rv">
+      <span class="mono">(01) Selected work</span>
+      <div>
+        <h2>Software that runs <em>real</em> businesses.</h2>
+        <p>Enterprise systems used every day for salaries, ledgers, loans and customer support. Tap any project for the details.</p>
+      </div>
+    </div>
+
+    <div class="work" id="workList">
+      <div class="row rv" data-img="/images/portfolio/HRM.jpg">
+        <button class="row-top" aria-expanded="false">
+          <span class="n">01</span><h3>HRM Payroll <em>— owned</em></h3><span class="role">Module owner</span><span class="stk mono">SQL Server · ASP.NET</span><span class="plus">+</span>
+        </button>
+        <div class="row-body"><div><div class="detail">
+          <div class="txt">
+            <h4>The challenge</h4><p>Payroll is where an HR system earns trust: every allowance, deduction and attendance rule has to add up, every month, for every employee.</p>
+            <h4>What I did</h4>
+            <ul><li>Built the complete payroll module for an HRM system on my own</li><li>Wrote the salary logic as complex SQL Server stored procedures</li><li>Connected it to the reports managers use to approve and pay salaries</li></ul>
+            <div class="pills"><span>C#</span><span>ASP.NET</span><span>SQL Server</span><span>Stored procedures</span><span>Crystal Report</span></div>
+          </div>
+          <div class="shot"><img src="/images/portfolio/HRM.jpg" alt="HRM payroll software built by Nazmul Hasan" loading="lazy" width="800" height="500"></div>
+        </div></div></div>
+      </div>
+
+      <div class="row rv" data-img="/images/portfolio/support_service.jpg">
+        <button class="row-top" aria-expanded="false">
+          <span class="n">02</span><h3>Billing &amp; Support Service</h3><span class="role">Full-stack developer</span><span class="stk mono">Web API · Payments</span><span class="plus">+</span>
+        </button>
+        <div class="row-body"><div><div class="detail">
+          <div class="txt">
+            <h4>The challenge</h4><p>Service businesses need to log customer issues, bill for the work and collect payment without juggling three different tools.</p>
+            <h4>What I did</h4>
+            <ul><li>Built billing and support service applications, backend to reports</li><li>Integrated a payment gateway for online collection</li><li>Designed the reporting for daily operations</li></ul>
+            <div class="pills"><span>ASP.NET Web API</span><span>SQL Server</span><span>Payment gateway</span><span>Reporting</span></div>
+          </div>
+          <div class="shot"><img src="/images/portfolio/support_service.jpg" alt="Support service and billing application by Nazmul Hasan" loading="lazy" width="800" height="500"></div>
+        </div></div></div>
+      </div>
+
+      <div class="row rv" data-img="/images/portfolio/accounting.jpg">
+        <button class="row-top" aria-expanded="false">
+          <span class="n">03</span><h3>ERP: Accounts, Sales &amp; Stock</h3><span class="role">Module developer</span><span class="stk mono">ASP.NET · SQL Server</span><span class="plus">+</span>
+        </button>
+        <div class="row-body"><div><div class="detail">
+          <div class="txt">
+            <h4>The challenge</h4><p>An ERP is only as good as the way its modules talk to each other: a sale has to move stock and post to the ledger in the same breath.</p>
+            <h4>What I did</h4>
+            <ul><li>Contributed to the Accounting, Sales, Purchase and Stock modules</li><li>Built database-driven business features and reports</li><li>Kept modules consistent across the transaction flow</li></ul>
+            <div class="pills"><span>ASP.NET</span><span>SQL Server</span><span>Crystal Report</span><span>jQuery</span></div>
+          </div>
+          <div class="shot"><img src="/images/portfolio/accounting.jpg" alt="Accounting and inventory ERP software by Nazmul Hasan" loading="lazy" width="800" height="500"></div>
+        </div></div></div>
+      </div>
+
+      <div class="row rv" data-img="/images/portfolio/MFiS.jpg">
+        <button class="row-top" aria-expanded="false">
+          <span class="n">04</span><h3>Microfinance System</h3><span class="role">Team developer</span><span class="stk mono">Production · Enhancements</span><span class="plus">+</span>
+        </button>
+        <div class="row-body"><div><div class="detail">
+          <div class="txt">
+            <h4>The challenge</h4><p>Microfinance runs on members, loans, savings and field collections, with very little room for error.</p>
+            <h4>What I did</h4>
+            <ul><li>Worked on the microfinance software as part of the development team</li><li>Shipped enhancements to the live production system</li></ul>
+            <div class="pills"><span>ASP.NET</span><span>SQL Server</span><span>Team delivery</span></div>
+          </div>
+          <div class="shot"><img src="/images/portfolio/MFiS.jpg" alt="Microfinance management software by Nazmul Hasan" loading="lazy" width="800" height="500"></div>
+        </div></div></div>
+      </div>
+
+      <div class="row rv" data-img="">
+        <button class="row-top" aria-expanded="false">
+          <span class="n">05</span><h3>eCommerce Platform</h3><span class="role">Developer</span><span class="stk mono">Build · Enhance</span><span class="plus">+</span>
+        </button>
+        <div class="row-body"><div><div class="detail">
+          <div class="txt">
+            <h4>What I did</h4>
+            <ul><li>Developed and enhanced a complete eCommerce application</li><li>Built and maintained its APIs, reports and database features</li></ul>
+            <div class="pills"><span>Web API</span><span>SQL Server</span><span>JavaScript</span></div>
+          </div>
+          <div class="shot"><div class="typo-shot">shop.</div></div>
+        </div></div></div>
+      </div>
+
+      <div class="row rv" data-img="/images/portfolio/numberPlate.png">
+        <button class="row-top" aria-expanded="false">
+          <span class="n">06</span><h3>Vehicle Recognition <em>— AI</em></h3><span class="role">Researcher</span><span class="stk mono">Deep learning · CV</span><span class="plus">+</span>
+        </button>
+        <div class="row-body"><div><div class="detail">
+          <div class="txt">
+            <h4>The research</h4><p>Teaching a model to see the road: detecting vehicles, telling their classes apart and reading number plates from images.</p>
+            <ul><li>Multi-class vehicle recognition with deep learning</li><li>Number plate detection research</li></ul>
+            <div class="pills"><span>Python</span><span>Deep learning</span><span>Computer vision</span></div>
+          </div>
+          <div class="shot"><img src="/images/portfolio/numberPlate.png" alt="Number plate detection AI research by Nazmul Hasan" loading="lazy" width="800" height="500"></div>
+        </div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI -->
+  <div id="ai" class="ai-wrap px">
+    <div class="sec-head rv">
+      <span class="mono">(02) AI work</span>
+      <div>
+        <h2>Business software, <em>now with a brain.</em></h2>
+        <p>I bring AI into the same practical world I build for: assistants that answer from real data, and vision models that read the physical world.</p>
+      </div>
+    </div>
+    <div class="ai-grid">
+      <article class="ai-card rv">
+        <span class="mono">Live on this site</span>
+        <svg class="viz" width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="none" stroke="currentColor" stroke-opacity=".25"/><circle cx="27" cy="27" r="16" fill="none" stroke="currentColor" stroke-opacity=".4" stroke-dasharray="3 4"><animateTransform attributeName="transform" type="rotate" from="0 27 27" to="360 27 27" dur="12s" repeatCount="indefinite"/></circle><circle cx="27" cy="27" r="6" fill="#ff4f1a"/></svg>
+        <h3>Jarvis, a grounded AI assistant</h3>
+        <p>A Gemini-powered assistant that answers only from my CV, served through a Cloudflare Worker so no API key ever reaches the browser.</p>
+        <div class="pills"><span>Gemini</span><span>Cloudflare Workers</span><span>Prompt design</span></div>
+        <a class="go" href="#ask">Try it above ↑</a>
+      </article>
+      <article class="ai-card rv">
+        <span class="mono">Research</span>
+        <svg class="viz" width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><rect x="3" y="12" width="48" height="30" rx="4" fill="none" stroke="currentColor" stroke-opacity=".3"/><rect x="12" y="20" width="18" height="14" fill="none" stroke="#ff4f1a" stroke-width="1.5"><animate attributeName="x" values="10;26;10" dur="4s" repeatCount="indefinite"/></rect></svg>
+        <h3>Multi-class vehicle recognition</h3>
+        <p>Deep learning models that detect vehicles, classify them and read number plates from road images.</p>
+        <div class="pills"><span>Deep learning</span><span>Object detection</span><span>OCR</span></div>
+        <a class="go" href="https://github.com/tasrif-nazmul/Computer-Vision" target="_blank" rel="noopener">See on GitHub ↗</a>
+      </article>
+      <article class="ai-card rv">
+        <span class="mono">Focus</span>
+        <svg class="viz" width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-opacity=".35"><rect x="4" y="30" width="9" height="20"/><rect x="17" y="20" width="9" height="30"/><rect x="30" y="26" width="9" height="24"/></g><path d="M8 24 L21 12 L34 18 L48 4" fill="none" stroke="#ff4f1a" stroke-width="1.6" stroke-dasharray="60" stroke-dashoffset="60"><animate attributeName="stroke-dashoffset" values="60;0;0" dur="3.5s" repeatCount="indefinite"/></path></svg>
+        <h3>AI inside ERP workflows</h3>
+        <p>Connecting language models to business data, so people can ask their system a question instead of hunting through reports.</p>
+        <div class="pills"><span>LLM integration</span><span>ERP</span><span>Automation</span></div>
+      </article>
+    </div>
+    <p class="ai-big rv">“The best AI feature is the one your accountant uses <em>without noticing</em> it's AI.”</p>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="px">
+    <div class="sec-head rv">
+      <span class="mono">(03) Experience</span>
+      <div><h2>Where I've <em>shipped.</em></h2></div>
+    </div>
+    <div class="xp">
+      <div class="xp-row rv">
+        <div class="when mono">Feb 2024 — Now<br><b>Current</b></div>
+        <div><h3>Junior Programmer</h3><div class="org">Generation-Next IT Solution Ltd.</div></div>
+        <ul>
+          <li>Built the complete payroll module for an HRM system with complex stored procedures</li>
+          <li>Built billing and support service apps with payment gateway integration</li>
+          <li>Contributed to accounting, sales, purchase and stock modules of the ERP</li>
+          <li>Developed and enhanced microfinance and eCommerce applications</li>
+        </ul>
+      </div>
+      <div class="xp-row rv">
+        <div class="when mono">2022 — 2024</div>
+        <div><h3>Web Developer</h3><div class="org">Bangla Clamore</div></div>
+        <ul><li>Designed and built websites and web features</li></ul>
+      </div>
+      <div class="xp-row rv">
+        <div class="when mono">May 2023 — Mar 2025</div>
+        <div><h3>Branding Executive</h3><div class="org">AIUB Environment Club</div></div>
+        <ul><li>Led branding for environmental awareness programs across schools, colleges and universities</li></ul>
+      </div>
+    </div>
+
+    <div class="creds">
+      <div class="cred rv"><span class="mono">Education</span><h4>BSc in Computer Science &amp; Engineering</h4><p>American International University-Bangladesh · 2020 — 2024</p><div class="big">3.58<small class="mono" style="font-size:12px;color:var(--mute)"> / 4.00 CGPA</small></div></div>
+      <div class="cred rv"><span class="mono">Recognition</span><h4>Leadership Certificate</h4><p>AIUB Environment Club, for organizational impact and sustainability campaigns.</p><div class="big">✦</div></div>
+      <div class="cred rv"><span class="mono">Next</span><h4>Master's in Computing</h4><p>Preparing for higher studies abroad, with a focus on AI and software systems.</p><div class="big">→</div></div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack" class="px">
+    <div class="sec-head rv">
+      <span class="mono">(04) Toolkit</span>
+      <div><h2>Tools I <em>trust</em> in production.</h2></div>
+    </div>
+    <div class="stack rv">
+      <div class="col"><span class="mono">Backend</span><ul><li>C#</li><li>ASP.NET Web API</li><li>ASP.NET MVC</li><li>NestJS</li></ul></div>
+      <div class="col"><span class="mono">Data</span><ul><li>SQL Server</li><li>MySQL</li><li>Stored procedures</li><li>Crystal Report</li></ul></div>
+      <div class="col"><span class="mono">Frontend</span><ul><li>Next.js</li><li>JavaScript</li><li>Tailwind CSS</li><li>jQuery</li></ul></div>
+      <div class="col"><span class="mono">AI &amp; design</span><ul><li>Gemini API</li><li>Computer vision</li><li>Photoshop</li><li>Sketch</li></ul></div>
+    </div>
+  </section>
+
+  <!-- GITHUB -->
+  <section id="code" class="px">
+    <div class="sec-head rv">
+      <span class="mono">(05) Open source</span>
+      <div><h2>From my <em>GitHub.</em></h2></div>
+    </div>
+    <div class="repos">
+      <a class="repo rv" href="https://github.com/tasrif-nazmul/Computer-Vision" target="_blank" rel="noopener"><span class="mono">AI · Python</span><h4>Computer-Vision</h4><p>Vision experiments and detection work.</p></a>
+      <a class="repo rv" href="https://github.com/tasrif-nazmul/AWT_Tele_Medicine" target="_blank" rel="noopener"><span class="mono">Web app</span><h4>AWT Tele Medicine</h4><p>Online doctor consultation platform.</p></a>
+      <a class="repo rv" href="https://github.com/tasrif-nazmul/Employee_Management_System" target="_blank" rel="noopener"><span class="mono">Business app</span><h4>Employee Management System</h4><p>Staff records and HR workflows.</p></a>
+      <a class="repo rv" href="https://github.com/tasrif-nazmul/NestJS" target="_blank" rel="noopener"><span class="mono">Backend</span><h4>NestJS</h4><p>Server-side APIs with NestJS.</p></a>
+      <a class="repo rv" href="https://github.com/tasrif-nazmul/Railway_Ticket_Booking_PHP" target="_blank" rel="noopener"><span class="mono">PHP</span><h4>Railway Ticket Booking</h4><p>Seat booking and ticketing flow.</p></a>
+      <a class="repo rv" href="https://github.com/tasrif-nazmul/Zero_Hunger" target="_blank" rel="noopener"><span class="mono">Social impact</span><h4>Zero Hunger</h4><p>Food donation and distribution app.</p></a>
+      <a class="repo rv" href="https://github.com/tasrif-nazmul/CVPR" target="_blank" rel="noopener"><span class="mono">Research</span><h4>CVPR</h4><p>Computer vision &amp; pattern recognition.</p></a>
+      <a class="repo rv" href="https://github.com/tasrif-nazmul" target="_blank" rel="noopener" style="background:var(--ink);color:var(--paper);border-color:var(--ink)"><span class="mono" style="color:inherit;opacity:.6">All repositories</span><h4>github.com/tasrif-nazmul ↗</h4><p style="color:inherit;opacity:.7">See everything I've pushed.</p></a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact px">
+    <span class="mono">(06) Contact</span>
+    <h2 class="cta-big rv">Have a business problem? <em>Let's build the fix.</em></h2>
+    <a class="mail rv" href="mailto:hello@nazmulhasan.com.bd">hello@nazmulhasan.com.bd <span aria-hidden="true">↗</span></a>
+    <div class="c-actions rv">
+      <button class="btn fill" id="copyMail">Copy email</button>
+      <a class="btn" href="/pdf/CV_Nazmul_Hasan.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="btn" href="https://www.linkedin.com/in/tasrif-nazmul/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <div class="c-grid">
+      <div><span class="mono">Phone</span><a href="tel:+8801783973740">+880 1783-973740</a></div>
+      <div><span class="mono">Office</span><a href="https://maps.app.goo.gl/3c2tbaeRRhmQSewr8" target="_blank" rel="noopener">G/15 Bashundhara R/A, Dhaka ↗</a></div>
+      <div><span class="mono">Elsewhere</span><a href="https://github.com/tasrif-nazmul" target="_blank" rel="noopener me">GitHub</a> · <a href="https://www.facebook.com/tasrifnaazmul" target="_blank" rel="noopener me">Facebook</a> · <a href="https://www.instagram.com/tasrif_nazmul/" target="_blank" rel="noopener me">Instagram</a></div>
+      <div><span class="mono">Local time</span><span id="clock2">--:--</span> in Dhaka</div>
+    </div>
+  </section>
 </main>
 
-<section id="about">
-  <div class="wrap">
-    <div class="sh reveal">
-      <div><span class="num">01 / About</span><h2>Problem solver first,<br>programmer second.</h2></div>
-    </div>
-    <div class="about">
-      <div class="reveal">
-        <p>I'm <strong>Nazmul Hasan</strong>, a software developer at <strong>Generation-Next IT Solution Ltd.</strong>, where I build business and ERP applications.</p>
-        <p>My goal is simple: software that is <strong>scalable, efficient and easy to use</strong>, shaped around how a business actually works rather than how a template says it should.</p>
-        <p>I enjoy untangling hard problems and keeping up with new technology, from classic ASP.NET and MSSQL systems to modern Next.js and Nest.js stacks.</p>
-      </div>
-      <div class="reveal">
-        <h3>Outside of work</h3>
-        <div class="chips">
-          <span class="chip">Research</span><span class="chip">Designing</span><span class="chip">Painting</span><span class="chip">Reading</span>
-          <span class="chip">Cinema</span><span class="chip">Music</span><span class="chip">Games</span><span class="chip">Sports</span>
-          <span class="chip">Coffee</span><span class="chip">Android</span>
-        </div>
-        <h3 style="margin-top:32px">Languages</h3>
-        <div class="chips">
-          <span class="chip">Bangla · native</span><span class="chip">English · fluent</span><span class="chip">Hindi · conversational</span><span class="chip">Urdu · basic</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="services">
-  <div class="wrap">
-    <div class="sh reveal">
-      <div><span class="num">02 / Services</span><h2>What I build</h2></div>
-      <p>Custom systems for businesses that have outgrown spreadsheets and paper registers.</p>
-    </div>
-    <div class="svc reveal">
-      <article><span class="ic">[01]</span><h3>ERP solutions</h3><p>One system for sales, purchase, inventory and accounts, with role-based access for every team.</p></article>
-      <article><span class="ic">[02]</span><h3>Accounting &amp; inventory</h3><p>Vouchers, ledgers, stock movement and financial statements that stay accurate every day.</p></article>
-      <article><span class="ic">[03]</span><h3>Micro finance</h3><p>Member, loan, savings and collection management built for field operations.</p></article>
-      <article><span class="ic">[04]</span><h3>HR &amp; payroll</h3><p>Employee records, attendance, leave and salary processing in one place.</p></article>
-      <article><span class="ic">[05]</span><h3>Reports</h3><p>Print-ready Crystal Reports and dashboards that managers can actually read.</p></article>
-      <article><span class="ic">[06]</span><h3>Modern web apps</h3><p>Fast, responsive apps and APIs with Next.js and Nest.js.</p></article>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="wrap">
-    <div class="sh reveal">
-      <div><span class="num">03 / Portfolio</span><h2>Selected work</h2></div>
-      <div class="filters" role="tablist" aria-label="Filter projects">
-        <button class="on" data-f="all">All</button>
-        <button data-f="development">Development</button>
-        <button data-f="research">Research</button>
-      </div>
-    </div>
-    <div class="grid">
-      <article class="proj reveal" data-cat="development">
-        <div class="thumb"><img src="/images/portfolio/MFiS.jpg" alt="Micro Finance management software by Nazmul Hasan" loading="lazy" width="800" height="500" onerror="this.parentNode.classList.add('noimg');this.remove()"><div class="fallback" aria-hidden="true">MF</div></div>
-        <div class="body"><span class="cat">Development</span><h3>Micro Finance</h3><p>Member, loan and savings management with collection tracking for microfinance institutions.</p><div class="tags"><span>ASP.NET</span><span>MSSQL</span><span>Crystal Report</span></div></div>
-      </article>
-      <article class="proj reveal" data-cat="development">
-        <div class="thumb"><img src="/images/portfolio/support_service.jpg" alt="Support Service ticketing system by Nazmul Hasan" loading="lazy" width="800" height="500" onerror="this.parentNode.classList.add('noimg');this.remove()"><div class="fallback" aria-hidden="true">SS</div></div>
-        <div class="body"><span class="cat">Development</span><h3>Support Service</h3><p>Ticketing and service tracking so support teams can log, assign and close customer issues.</p><div class="tags"><span>ASP.NET</span><span>jQuery</span></div></div>
-      </article>
-      <article class="proj reveal" data-cat="development">
-        <div class="thumb"><img src="/images/portfolio/accounting.jpg" alt="Accounting and Inventory software by Nazmul Hasan" loading="lazy" width="800" height="500" onerror="this.parentNode.classList.add('noimg');this.remove()"><div class="fallback" aria-hidden="true">AI</div></div>
-        <div class="body"><span class="cat">Development</span><h3>Accounting Inventory</h3><p>Vouchers, ledgers and stock control with financial reports for day-to-day business accounts.</p><div class="tags"><span>ASP.NET</span><span>MSSQL</span></div></div>
-      </article>
-      <article class="proj reveal" data-cat="development">
-        <div class="thumb"><img src="/images/portfolio/HRM.jpg" alt="Human Resources management software by Nazmul Hasan" loading="lazy" width="800" height="500" onerror="this.parentNode.classList.add('noimg');this.remove()"><div class="fallback" aria-hidden="true">HR</div></div>
-        <div class="body"><span class="cat">Development</span><h3>Human Resources</h3><p>Employee profiles, attendance, leave and payroll handled in a single HR system.</p><div class="tags"><span>ASP.NET</span><span>MSSQL</span></div></div>
-      </article>
-      <article class="proj reveal" data-cat="research">
-        <div class="thumb"><img src="/images/portfolio/numberPlate.png" alt="Number Plate Detection research project by Nazmul Hasan" loading="lazy" width="800" height="500" onerror="this.parentNode.classList.add('noimg');this.remove()"><div class="fallback" aria-hidden="true">NP</div></div>
-        <div class="body"><span class="cat">Research</span><h3>Number Plate Detection</h3><p>Research on detecting and reading vehicle number plates from images.</p><div class="tags"><span>Computer vision</span></div></div>
-      </article>
-      <article class="proj reveal" data-cat="development">
-        <div class="thumb"><img src="/images/portfolio/Ticket_Booking.jpg" alt="Ticket Booking web application by Nazmul Hasan" loading="lazy" width="800" height="500" onerror="this.parentNode.classList.add('noimg');this.remove()"><div class="fallback" aria-hidden="true">TB</div></div>
-        <div class="body"><span class="cat">Development</span><h3>Ticket Booking</h3><p>Online seat selection and booking flow with booking management for operators.</p><div class="tags"><span>Web app</span></div></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="resume">
-  <div class="wrap">
-    <div class="sh reveal">
-      <div><span class="num">04 / Resume</span><h2>Where I've worked</h2></div>
-      <a class="btn" href="/pdf/CV_Nazmul_Hasan.pdf" target="_blank" rel="noopener">Full CV (PDF)</a>
-    </div>
-    <div class="tl">
-      <div class="item reveal"><div class="when">Feb 2024 – Present<br><b>CURRENT</b></div><div><h3>Junior Programmer</h3><div class="org">Generation-Next IT Solution Ltd.</div><p>Building business and ERP applications for clients across finance, accounting and HR.</p></div></div>
-      <div class="item reveal"><div class="when">2022 – 2024</div><div><h3>Web Developer</h3><div class="org">Bangla Clamore</div><p>Designed and developed websites and web features.</p></div></div>
-      <div class="item reveal"><div class="when">May 2023 – Mar 2025</div><div><h3>Branding Executive</h3><div class="org">AIUB Environment Club</div><p>Led visual branding and design for club campaigns and events.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="stack">
-  <div class="wrap">
-    <div class="sh reveal">
-      <div><span class="num">05 / Expertise</span><h2>Tools I trust</h2></div>
-    </div>
-    <div class="stack reveal">
-      <div class="box"><h3>Backend</h3><ul><li>ASP.NET<small>core</small></li><li>Nest.js<small>api</small></li></ul></div>
-      <div class="box"><h3>Frontend</h3><ul><li>Next.js<small>react</small></li><li>jQuery<small>ui</small></li></ul></div>
-      <div class="box"><h3>Data &amp; reports</h3><ul><li>MSSQL<small>db</small></li><li>Crystal Report<small>print</small></li></ul></div>
-      <div class="box"><h3>Design</h3><ul><li>Photoshop<small>graphics</small></li><li>Sketch<small>ui</small></li></ul></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap contact">
-    <div class="reveal">
-      <span class="num mono" style="color:var(--acc);font-size:13px">06 / Contact</span>
-      <p class="big" style="margin-top:8px">Have a business <em>problem?</em><br>Let's build the fix.</p>
-      <div class="cinfo">
-        <a href="mailto:hello@nazmulhasan.com.bd"><small>Email</small>hello@nazmulhasan.com.bd</a>
-        <a href="tel:+8801783973740"><small>Phone</small>+880 1783-973740</a>
-        <a href="https://maps.app.goo.gl/3c2tbaeRRhmQSewr8" target="_blank" rel="noopener"><small>Office</small>G/15 Bashundhara R/A, Dhaka, Bangladesh ↗</a>
-      </div>
-    </div>
-    <form id="cform" class="reveal" novalidate>
-      <label>Your name<input name="name" required autocomplete="name"></label>
-      <label>Email<input name="email" type="email" required autocomplete="email"></label>
-      <label>What do you need?<textarea name="msg" required></textarea></label>
-      <button class="btn primary" type="submit">Send message →</button>
-      <p class="note" id="cnote" role="status"></p>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <span>© <span id="yr">2026</span> Nazmul Hasan · Software &amp; ERP developer in Bangladesh</span>
-    <nav class="social" aria-label="Social">
-      <a href="https://github.com/tasrif-nazmul" target="_blank" rel="noopener me">GitHub</a>
-      <a href="https://www.linkedin.com/in/tasrif-nazmul/" target="_blank" rel="noopener me">LinkedIn</a>
-      <a href="https://www.facebook.com/tasrifnaazmul" target="_blank" rel="noopener me">Facebook</a>
-      <a href="https://www.instagram.com/tasrif_nazmul/" target="_blank" rel="noopener me">Instagram</a>
-    </nav>
-  </div>
+<footer class="px mono">
+  <span>© <span id="yr">2026</span> Nazmul Hasan</span>
+  <span>Set in Geist &amp; Instrument Serif · Hand-built, no template</span>
+  <a href="#top">Back to top ↑</a>
 </footer>
+
+<div id="peek" aria-hidden="true"><img alt=""></div>
+
+<div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Command menu">
+  <div class="cmdk-box">
+    <input id="kq" placeholder="Where to? Try “work”, “email”, “dark”…" autocomplete="off">
+    <ul id="klist"></ul>
+    <div class="hint mono">↑↓ to move · Enter to open · Esc to close</div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
 
 <script>
 (function(){
+  var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
   var root=document.documentElement;
-  try{var t=localStorage.getItem('theme');if(t)root.dataset.theme=t;}catch(e){}
-  document.getElementById('theme').addEventListener('click',function(){
-    var n=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=n;
-    try{localStorage.setItem('theme',n);}catch(e){}
-  });
-  document.getElementById('yr').textContent=new Date().getFullYear();
 
-  // filters
-  var btns=document.querySelectorAll('.filters button');
-  btns.forEach(function(b){b.addEventListener('click',function(){
-    btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');
-    var f=b.dataset.f;
-    document.querySelectorAll('.proj').forEach(function(p){p.classList.toggle('hide',f!=='all'&&p.dataset.cat!==f)});
-  })});
+  /* theme */
+  try{var t=localStorage.getItem('nh-theme');if(t)root.dataset.theme=t;}catch(e){}
+  function toggleTheme(){var n=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=n;try{localStorage.setItem('nh-theme',n)}catch(e){}}
+  $('#theme').addEventListener('click',toggleTheme);
 
-  // reveal
-  var els=document.querySelectorAll('.reveal');
+  /* intro */
+  requestAnimationFrame(function(){setTimeout(function(){document.body.classList.add('loaded')},80)});
+  $('#yr').textContent=new Date().getFullYear();
+
+  /* clock */
+  function tick(){
+    var s;try{s=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Dhaka',hour:'2-digit',minute:'2-digit'}).format(new Date())}catch(e){s=''}
+    $('#clock').textContent=s;$('#clock2').textContent=s;
+  }
+  tick();setInterval(tick,15000);
+
+  /* bar + progress + active nav */
+  var bar=$('#bar'),prog=$('#progress'),links=$$('.bar nav a');
+  function onScroll(){
+    var y=window.scrollY,h=document.documentElement.scrollHeight-innerHeight;
+    bar.classList.toggle('scrolled',y>10);prog.style.width=(h>0?y/h*100:0)+'%';
+    var cur='';['work','ai','experience','contact'].forEach(function(id){var el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<innerHeight*.4)cur=id});
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* reveal */
   if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-    els.forEach(function(el){io.observe(el)});
-  }else els.forEach(function(el){el.classList.add('in')});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    $$('.rv').forEach(function(el){io.observe(el)});
+  }else $$('.rv').forEach(function(el){el.classList.add('in')});
 
-  // blinking cursor
-  var c=document.getElementById('cursor'),on=true;
-  setInterval(function(){on=!on;c.textContent=on?'your idea_':'your idea ';},600);
+  /* image fallback */
+  $$('img').forEach(function(img){img.addEventListener('error',function(){img.style.visibility='hidden'})});
 
-  // contact form -> opens email app
-  document.getElementById('cform').addEventListener('submit',function(e){
-    e.preventDefault();
-    var f=e.target,note=document.getElementById('cnote');
-    if(!f.name.value||!f.email.value||!f.msg.value){note.textContent='Please fill in all fields.';return;}
-    var body=f.msg.value+'\n\n— '+f.name.value+' ('+f.email.value+')';
-    note.textContent='Opening your email app… or write to hello@nazmulhasan.com.bd';
-    location.href='mailto:hello@nazmulhasan.com.bd?subject='+encodeURIComponent('Project inquiry from '+f.name.value)+'&body='+encodeURIComponent(body);
+  /* work accordion + hover peek */
+  var peek=$('#peek'),pimg=$('img',peek);
+  $$('.row').forEach(function(row){
+    var b=$('.row-top',row);
+    b.addEventListener('click',function(){
+      var open=!row.classList.contains('open');
+      $$('.row.open').forEach(function(r){if(r!==row){r.classList.remove('open');$('.row-top',r).setAttribute('aria-expanded','false')}});
+      row.classList.toggle('open',open);b.setAttribute('aria-expanded',String(open));
+      peek.classList.remove('show');
+    });
+    b.addEventListener('mouseenter',function(){var s=row.dataset.img;if(!s||row.classList.contains('open'))return;pimg.src=s;peek.classList.add('show')});
+    b.addEventListener('mouseleave',function(){peek.classList.remove('show')});
+  });
+  addEventListener('mousemove',function(e){peek.style.left=(e.clientX+170)+'px';peek.style.top=e.clientY+'px'},{passive:true});
+
+  /* spotlight on AI cards */
+  $$('.ai-card').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
+
+  /* toast + copy */
+  var toastT;function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('show')},2200)}
+  function copyMail(){
+    var m='hello@nazmulhasan.com.bd';
+    try{navigator.clipboard.writeText(m).then(function(){toast('Email copied ✓')},function(){toast(m)})}catch(e){toast(m)}
+  }
+  $('#copyMail').addEventListener('click',copyMail);
+
+  /* ---------- Jarvis ---------- */
+  var API='https://portfolio-chatbot.nazmulhasan03412.workers.dev';
+  var KB=[
+    {k:['built','project','work','portfolio','made','system'],a:"Nazmul has built and contributed to six enterprise systems: a complete HRM payroll module (which he owned end-to-end), billing and support service apps with payment gateway integration, ERP accounting, sales, purchase and stock modules, a microfinance system, an eCommerce platform, and AI research on multi-class vehicle recognition."},
+    {k:['stack','tech','skill','language','tools','framework','know'],a:"His core stack is C#, ASP.NET (Web API, MVC, Web Forms) and SQL Server with complex stored procedures. He also works with NestJS, Next.js, JavaScript, Tailwind CSS, MySQL and Crystal Reports, plus Gemini for AI features."},
+    {k:['ai','machine','deep','vision','gemini','gpt','llm','chatbot','model'],a:"On the AI side, Nazmul built me (Jarvis), a Gemini-powered assistant served safely through a Cloudflare Worker, and researched multi-class vehicle recognition and number plate detection with deep learning. He's focused on bringing AI into ERP and business workflows."},
+    {k:['available','hire','freelance','free','project','open','work with','contract'],a:"Yes, he's open to new projects, especially ERP, HRM, accounting or AI-integrated business apps. The quickest way to reach him is hello@nazmulhasan.com.bd or +880 1783-973740."},
+    {k:['experience','job','company','work at','current','year'],a:"Nazmul has been a Junior Programmer at Generation-Next IT Solution Ltd. since February 2024, building ERP and business software. Before that he was a web developer at Bangla Clamore (2022–2024)."},
+    {k:['study','education','university','degree','aiub','cgpa','master'],a:"He holds a BSc in Computer Science and Engineering from American International University-Bangladesh (2020–2024) with a CGPA of 3.58/4.00, and is preparing for a Master's in Computing abroad."},
+    {k:['payroll','hrm','salary'],a:"He owned the complete payroll module of an HRM system, writing the salary processing logic as complex SQL Server stored procedures and connecting it to the approval reports."},
+    {k:['contact','email','phone','reach','call','where','location','based'],a:"Nazmul is based in Bashundhara R/A, Dhaka, Bangladesh. Email hello@nazmulhasan.com.bd or call +880 1783-973740."},
+    {k:['award','leader','club'],a:"He received a Leadership Certificate from the AIUB Environment Club, where he served as Branding Executive and helped run awareness programs across schools and universities."},
+    {k:['who are you','your name','jarvis','what are you'],a:"I'm Jarvis, Nazmul Hasan's personal AI assistant. I can tell you about his work, skills and availability."}
+  ];
+  function local(q){
+    q=q.toLowerCase();var best=null,score=0;
+    KB.forEach(function(e){var s=0;e.k.forEach(function(k){if(q.indexOf(k)>-1)s+=k.length});if(s>score){score=s;best=e}});
+    return best?best.a:"I don't have that detail. Please contact Nazmul at hello@nazmulhasan.com.bd for more.";
+  }
+  var log=$('#log'),hist=[],busy=false;
+  function add(cls,txt){var d=document.createElement('div');d.className='msg '+cls;d.textContent=txt||'';log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+  function typeOut(el,text){
+    el.classList.add('typing');el.textContent='';var i=0;
+    (function step(){i+=Math.max(1,Math.round(text.length/90));el.textContent=text.slice(0,i);log.scrollTop=log.scrollHeight;if(i<text.length)setTimeout(step,16);else el.classList.remove('typing')})();
+  }
+  function remote(q){
+    hist.push({role:'user',parts:[{text:q}]});
+    var ctrl=('AbortController' in window)?new AbortController():null;var to=setTimeout(function(){ctrl&&ctrl.abort()},9000);
+    return fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:hist.slice(-6)}),signal:ctrl?ctrl.signal:undefined})
+      .then(function(r){clearTimeout(to);if(!r.ok)throw 0;return r.json()})
+      .then(function(d){var t=d&&d.candidates&&d.candidates[0]&&d.candidates[0].content&&d.candidates[0].content.parts&&d.candidates[0].content.parts[0].text;if(!t)throw 0;t=t.replace(/\*\*(.*?)\*\*/g,'$1').trim();hist.push({role:'model',parts:[{text:t}]});return t});
+  }
+  function ask(q){
+    q=(q||'').trim();if(!q||busy)return;busy=true;
+    add('me',q);var el=add('ai typing','');
+    remote(q).catch(function(){hist.pop();return local(q)}).then(function(a){typeOut(el,a);busy=false});
+  }
+  $('#askForm').addEventListener('submit',function(e){e.preventDefault();var i=$('#q');ask(i.value);i.value=''});
+  $$('#chips button').forEach(function(b){b.addEventListener('click',function(){ask(b.textContent)})});
+
+  /* ---------- command palette ---------- */
+  var isMac=/Mac|iPhone|iPad/.test(navigator.platform||'');$('#kmod').textContent=isMac?'⌘K':'Ctrl K';
+  function go(id){return function(){var el=document.getElementById(id);el&&el.scrollIntoView({behavior:'smooth'})}}
+  var cmds=[
+    {t:'Selected work',g:'Go to',f:go('work')},
+    {t:'AI work',g:'Go to',f:go('ai')},
+    {t:'Experience & education',g:'Go to',f:go('experience')},
+    {t:'Toolkit',g:'Go to',f:go('stack')},
+    {t:'Open source',g:'Go to',f:go('code')},
+    {t:'Contact',g:'Go to',f:go('contact')},
+    {t:'Ask Jarvis a question',g:'AI',f:function(){go('top')();setTimeout(function(){$('#q').focus()},500)}},
+    {t:'Copy email address',g:'Action',f:copyMail},
+    {t:'Download CV',g:'Action',f:function(){location.href='/pdf/CV_Nazmul_Hasan.pdf'}},
+    {t:'Toggle dark / light mode',g:'Action',f:toggleTheme},
+    {t:'GitHub',g:'Link',f:function(){window.open('https://github.com/tasrif-nazmul','_blank')}},
+    {t:'LinkedIn',g:'Link',f:function(){window.open('https://www.linkedin.com/in/tasrif-nazmul/','_blank')}}
+  ];
+  var K=$('#cmdk'),kq=$('#kq'),kl=$('#klist'),sel=0,view=cmds;
+  function render(){
+    var q=kq.value.toLowerCase();view=cmds.filter(function(c){return (c.t+' '+c.g).toLowerCase().indexOf(q)>-1});
+    if(sel>=view.length)sel=0;
+    kl.innerHTML='';view.forEach(function(c,i){var li=document.createElement('li');li.innerHTML='<span></span><small></small>';li.firstChild.textContent=c.t;li.lastChild.textContent=c.g;if(i===sel)li.className='sel';li.addEventListener('mouseenter',function(){sel=i;render()});li.addEventListener('click',function(){run(i)});kl.appendChild(li)});
+  }
+  function openK(){K.classList.add('open');kq.value='';sel=0;render();setTimeout(function(){kq.focus()},20)}
+  function closeK(){K.classList.remove('open')}
+  function run(i){var c=view[i];closeK();c&&c.f()}
+  $('#openK').addEventListener('click',openK);
+  K.addEventListener('click',function(e){if(e.target===K)closeK()});
+  kq.addEventListener('input',function(){sel=0;render()});
+  addEventListener('keydown',function(e){
+    if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();K.classList.contains('open')?closeK():openK();return}
+    if(!K.classList.contains('open'))return;
+    if(e.key==='Escape')closeK();
+    else if(e.key==='ArrowDown'){e.preventDefault();sel=(sel+1)%Math.max(view.length,1);render()}
+    else if(e.key==='ArrowUp'){e.preventDefault();sel=(sel-1+view.length)%Math.max(view.length,1);render()}
+    else if(e.key==='Enter'){e.preventDefault();run(sel)}
   });
 })();
 </script>
